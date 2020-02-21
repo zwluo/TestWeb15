@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script th:src="@{static/jquery/jquery-3.4.1.js}"></script>
+    <link rel="stylesheet" th:href="@{static/dependency/layui/css/layui.css}">
+    <style>
+        .read-content {
+            font-size: 18px;
+        }
+
+        .main-text-wrap {
+            padding: 60px 64px;
+        }
+
+        .main-text-wrap .read-content p {
+            line-height: 1.8;
+            overflow: hidden;
+            margin: .8em 0;
+        }
+
+        .read-main-wrap {
+            font-family: PingFangSC-Regular, HelveticaNeue-Light, 'Helvetica Neue Light', 'Microsoft YaHei', sans-serif;
+            font-size: 18px;
+            width: 800px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+<input type="button" onclick="search()" value="开始"/>
+<script>
+    function search() {
+        var ctxPath = localStorage.getItem("ctxPath");
+        $.ajax({
+            type: 'post',
+            url: ctxPath + "/pachong.do",
+            success: function(result) {
+                alert(result);
+            }
+        });
+
+
+    }
+
+</script>
+
+<div class="read-main-wrap">
+
+
+
+<div class="main-text-wrap">
+<div>
+    <button type="button" class="layui-btn layui-btn-primary">原始按钮</button>
+    <button type="button" class="layui-btn">默认按钮</button>
+    <button type="button" class="layui-btn layui-btn-normal">百搭按钮</button>
+    <button type="button" class="layui-btn layui-btn-warm">暖色按钮</button>
+    <button type="button" class="layui-btn layui-btn-danger">警告按钮</button>
+    <button type="button" class="layui-btn layui-btn-disabled">禁用按钮</button>
+</div>
+
+<div class="read-content">
+    <p><span>好吃精</span></p>
+    <p><span>细伢子，好吃精，</span></p>
+    <p><span>偷钱买花生。</span></p>
+    <p><span>花生壳，变麻雀，</span></p>
+    <p><span>麻雀飞，变乌龟，</span></p>
+    <p><span>乌龟爬，变绿蛇，</span></p>
+    <p><span>绿蛇游，变皮球，</span></p>
+
+    <p><span>皮球滚，变树根，</span></p>
+    <p><span>树根长，变村长，</span></p>
+    <p><span>村长头上有个疤，</span></p>
+    <p><span>打个电话到兴化，</span></p>
+    <p><span>兴化的人在吃粥，</span></p>
+    <p><span>十驾飞机打美国。</span></p>
+    <p><span>演唱人：顾健			搜集人：顾永骏</span></p>
+
+
+    从前，有条商船，谁也说不清到底有多大，只晓得从船头跑到船艄，需要一年时间。
+    有一天，这条商船载着一千万个绸缎商人，在海洋上行驶。迎面遇见一条张着口的大鲨鱼，一口把商船吞进肚子里。这时来了一个老头和一个少年，老头手执钓鱼竿把这条大鱼钓了起来，少年惊讶地说：“乖乖，好一条大鱼！”老头说：“太小了，还不够我家猫子吃一顿呢！”说着，老头用两个指头在鱼肚子上一抹，把商船挤了出来，轻轻地放在水面上，船上商人为了报答救命大恩，每人赠送一尺绸缎给老头。老头把绸缎拿回家，老太婆说：“这么点绸缎，你做一件马夹都不够，要它做什么！”老头说：“千里送鹅毛，礼轻情意重，这是人家的心意啊。”老太婆经过一番量算，给老头做了一顶套在头上的小帽子。
+    有一次，老头在村边散步，忽然飞来一只鸟儿，把老头的帽子衔走了。老头很生气，抓起两块石头向鸟儿扔去，鸟儿没有砸着，两块石头掉在正在河边淘米的老太婆的淘箩里。老太婆没有在意，把米倒进了锅里煮好饭。老夫妻在吃饭时，觉得有个东西碰牙齿，张口一吐，老头嘴里的一块石头，立即向东飞去，落在海边，就是现在的东岳泰山。老太婆嘴里的一块石头向西飞去，落在陕西境内，就是现在的西岳华山。
+    口述人：顾神童         搜集人：王加友
+
+</div>
+
+</div>
+
+</div>
+</body>
+</html>

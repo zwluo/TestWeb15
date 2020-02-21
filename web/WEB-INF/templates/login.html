@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{static/dependency/bootstrap/css/bootstrap.css}">
+    <!--<link rel="stylesheet" th:href="@{static/css/login.css}">-->
+</head>
+<body>
+<!--/*@thymesVar id="name" type="java.lang.String"*/-->
+<p th:text="'Hello滴滴你好!'" >3333滴滴</p>
+<form method="post" th:action="@{/login}" class="layui-form">
+    <input name="username" type="text" th:placeholder="#{username}" lay-verify="username" class="layui-input">
+    <hr class="hr15">
+    <input name="password" lay-verify="password" th:placeholder="#{password}" type="password" class="layui-input">
+    <hr class="hr15">
+    <input th:value="#{login}" lay-submit lay-filter="login" style="width:100%;" type="submit">
+    <hr class="hr20">
+</form>
+
+</body>
+</html>
