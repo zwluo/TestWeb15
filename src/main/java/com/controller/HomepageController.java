@@ -23,7 +23,7 @@ public class HomepageController
 
     @RequestMapping(value = "/console", method = RequestMethod.GET)
     public String console(Model model) {
-        System.out.println("console");
+        System.out.println("console2");
         model.addAttribute("name", "Dear");
         return "console";
     }
